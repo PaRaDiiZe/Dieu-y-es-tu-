@@ -1,0 +1,32 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+    <main class="container-content"> 
+        <h1 class="form-h1">Créer une Page</h1>
+        <p class="form-chapo">Ici vous pouvez créer otre page</p>
+        {# <div class="pre-visual">
+            <div class="pre-visual__item" id="dynamicElement">
+            </div>
+        </div> #}
+        <form action="index.php?page=page&action=create" method="post" class="form" id="dynamicForm">
+            <label for="famille-select">Choisissez la famille reliée</label>
+            <select name="id_famille" id="famille-select">
+                {% for f in familles %}
+                    <option value="{{f.id}}">{{f.nom}}</option>
+                {% endfor %}
+            </select>
+            <div class="form__color">
+            {% for c in couleurs %}
+                {# Une fonction en js qui recupere la valeur de "placholderColor" et créer une div avec ce fond #}
+                <label for="{{c.id}}" class="container">{{c.nom}}
+                    <input type="radio" id="{{c.id}}" name="id_couleur" data-color="{{c.hex}}" value="{{c.id}}" data-checked="0" required>
+                    <span class="checkmark"></span>
+                </label>
+            {% endfor %}
+            </div>
+            <input type="text" name="nom" placeholder="Saisir le nom de la page" required>
+            <input type="text" name="resume" placeholder="Entrez le resume de la page" required>
+            <input type="submit" name="create" value="Créer">
+        </form>
+    </main>
+{% endblock main %}

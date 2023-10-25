@@ -1,0 +1,12 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+    <main class="container-content"> 
+        {% for a in articles %}
+            <h1>{{a.nom}}</h1>
+            <a href="index.php?page=article&action=edit&id={{a.id}}">Modifier</a>
+            <a href="index.php?page=article&action=delete&id={{a.id}}">Supprimer</a>
+            <br>
+        {% endfor %}
+    </main>
+{% endblock main %}

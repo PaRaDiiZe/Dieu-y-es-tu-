@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Epilogue", sans-serif;
+    font-weight : $fw-regular;
+    font-size : 1.18rem;
+    @media (max-width: 480px) {
+        font-size : 1.063rem;
+        }
+    
+}
+
+main.container-content {
+    width: 1040px;
+    margin: 0 auto;
+}
+
+main.full-width {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+

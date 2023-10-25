@@ -1,0 +1,382 @@
+.pre-visual__item {
+
+    float: none !important;
+    margin: 0 !important;
+
+
+    &--p {
+        margin-bottom: 1.6rem;
+        font-weight: $fw-light;
+        line-height: 1.5rem;
+        font-family: "Epilogue", sans-serif;
+        text-align: left !important
+    }
+
+    &--blockquote {
+        text-align: center;
+        margin: 2.2rem auto;
+        position: relative;
+        width: 60%;
+        font-weight: $fw-bold !important;
+        font-size: 1.7rem;
+        line-height: 2rem !important;
+        z-index: 10;
+    }
+
+    &--blockquote::before {
+        content: url(/public/svg/guillemet.svg);
+        z-index: -10;
+        position: absolute;
+        top: -50px;
+        left: -20px;
+    }
+
+    &--h2 {
+        font-size: 2rem;
+        font-weight: $fw-bold;
+        margin-top: 2rem;
+        margin-bottom: 1.3rem;
+        border-left: 5px solid $pink;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+    }
+
+    &--h2::before {
+        content: '';
+        border-left: 6px solid #E89DB6;
+        padding-right: 10px;
+    }
+
+    &--a {
+        font-size: 1rem;
+        color: black; //metttre la couleur de la page?
+    }
+
+    &--a:hover {
+        color: blue; //ou mettre la couleur de la page ici ?
+    }
+
+    &--img {
+        float: none;
+    }
+}
+
+q {
+    font-style: italic;
+}
+
+q span {
+    font-style: normal !important;
+}
+
+b {
+    font-weight: $fw-bold;
+}
+
+/*
+    Base de données des classes
+*/
+
+.img-petit-right {
+    width: 25% !important;
+    float: right;
+    margin-top: 0 !important;
+}
+
+.img-petit-left {
+    width: 25% !important;
+    float: left;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+.img-moyen-left {
+    width: 50% !important;
+    float: left;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+.img-moyen-right {
+    width: 50% !important;
+    float: right;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+.img-moyen {
+    // width: 70%;
+    text-align: center;
+    display: block;
+    margin: 25px auto 35px auto;
+    width: 960px !important;
+}
+
+.bloc-db {
+    display: flex;
+    width: 70%;
+    margin: auto;
+
+    & .article__container__item {
+        margin: none;
+        padding: 2rem;
+    }
+}
+
+div:has(.full-screen-vid),
+.full-screen-vid {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+}
+
+// .left-bloc-highlight {
+//     font-weight: $fw-regular !important;
+//     padding: 2rem;
+//     background: linear-gradient(49.58deg, rgba(232, 157, 182, 0.2) 0%, rgba(245, 138, 137, 0.2) 42.71%, rgba(244, 160, 74, 0.4) 87.5%);
+//     border-radius: 5px;
+// }
+
+.bloc-left {
+    float: left;
+    margin-right: 3% !important;
+}
+
+.bloc-right {
+    float: right;
+    margin-left: 3% !important;
+}
+
+.bloc-center {
+    width: 100vh !important;
+}
+
+.credit-div {
+    margin-bottom: 50px !important;
+}
+
+.credit-div p {
+    margin-bottom: 15px;
+    line-height: 1.6rem;
+}
+
+.credit-div h2 {
+    margin-bottom: 20px !important;
+}
+
+.color-credit {
+    & .progress__bar {
+        background: #FF4AB6;
+    }
+
+    & h2 {
+        border-left: 5px solid #FF4AB6;
+    }
+
+    & a:hover {
+        color: #FF4AB6;
+        border-bottom: 2px solid #FF4AB6;
+    }
+}
+
+.color-7 {
+
+    & .progress__bar {
+        background: #FF4AB6;
+    }
+
+    & blockquote::before {
+        content: url(../public/svg/guillement-7.svg);
+        z-index: -10;
+        position: absolute;
+        top: -30px;
+        left: -5px;
+    }
+
+    & h2 {
+        border-left: 5px solid #FF4AB6;
+    }
+
+    & a:hover {
+        color: #FF4AB6;
+        border-bottom: 2px solid #FF4AB6;
+    }
+}
+
+.colorli-7 {
+    background-color: #FF4AB6;
+}
+
+.colorbloc-7 {
+    background-color: rgba(255, 74, 182, 40%);
+}
+
+
+.color-10 {
+
+    & .progress__bar {
+        background: #74DCAF;
+    }
+
+    & blockquote::before {
+        content: url(../public/svg/guillement-10.svg);
+        z-index: -10;
+        position: absolute;
+        top: -30px;
+        left: -5px;
+    }
+
+    & h2 {
+        border-left: 5px solid #74DCAF;
+    }
+
+    & a:hover {
+        color: #74DCAF;
+        border-bottom: 2px solid #74DCAF;
+    }
+}
+
+.colorli-10 {
+    background-color: #74DCAF;
+}
+
+.colorbloc-10 {
+    background-color: rgba(116, 220, 175, 50%);
+}
+
+
+.color-5 {
+
+    & .progress__bar {
+        background: #5306D0;
+    }
+
+    & blockquote::before {
+        content: url(../public/svg/guillement-5.svg);
+        z-index: -10;
+        position: absolute;
+        top: -30px;
+        left: -5px;
+    }
+
+    & h2 {
+        border-left: 5px solid #5306D0;
+    }
+
+    & a:hover {
+        color: #5306D0;
+        border-bottom: 2px solid #5306D0;
+    }
+}
+
+.colorli-5 {
+    background-color: #5306D0;
+}
+
+.colorbloc-5 {
+    background-color: rgba(83, 6, 208, 60%);
+}
+
+.color-8 {
+
+    & .progress__bar {
+        background: #FF7B1B;
+    }
+
+    & blockquote::before {
+        content: url(../public/svg/guillement-8.svg);
+        z-index: -10;
+        position: absolute;
+        top: -30px;
+        left: -5px;
+    }
+
+    & h2 {
+        border-left: 5px solid #FF7B1B;
+    }
+
+    & a:hover {
+        color: #FF7B1B;
+        border-bottom: 2px solid #FF7B1B;
+    }
+}
+
+.colorli-8 {
+    background-color: #FF7B1B;
+}
+
+.colorbloc-8 {
+    background-color: rgba(255, 123, 27, 60%);
+}
+
+.color-9 {
+
+    & .progress__bar {
+        background: #F3B928;
+    }
+
+    & blockquote::before {
+        content: url(../public/svg/guillement-9.svg);
+        z-index: -10;
+        position: absolute;
+        top: -30px;
+        left: -5px;
+    }
+
+    & h2 {
+        border-left: 5px solid #F3B928;
+    }
+
+    & a:hover {
+        color: #F3B928;
+        border-bottom: 2px solid #F3B928;
+    }
+}
+
+.colorli-9 {
+    background-color: #F3B928;
+}
+
+.colorbloc-9 {
+    background-color: rgba(243, 185, 40, 40%);
+}
+
+.color-6 {
+
+    & .progress__bar {
+        background: #FF2D31;
+    }
+
+    & blockquote::before {
+        content: url(../public/svg/guillement-6.svg);
+        z-index: -10;
+        position: absolute;
+        top: -30px;
+        left: -5px;
+    }
+
+    & h2 {
+        border-left: 5px solid #FF2D31;
+    }
+
+    & a:hover {
+        color: #FF2D31;
+        border-bottom: 2px solid #FF2D31;
+    }
+}
+
+.colorli-6 {
+    background-color: #FF2D31;
+}
+
+.colorbloc-6 {
+    background-color: rgba(255, 45, 49, 60%);
+}
+
+audio {
+    width: 100%;
+    margin: 1rem
+}

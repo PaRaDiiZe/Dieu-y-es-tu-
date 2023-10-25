@@ -1,0 +1,199 @@
+.generated { 
+    
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    margin: 1rem 0;
+
+
+    &>img {
+        max-width: 100%;
+        width: 500px;
+    }
+
+    &__alter {
+        position: absolute;
+        background-color: $black;
+        padding: 5px;
+        margin-top: -55px;
+        visibility: hidden;
+        user-select: none;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid $black;
+            position: absolute;
+            bottom: -20px;
+            left: 0px;
+        }
+
+        &>a>img {
+            width: 32px;
+            height: 32px;
+            filter: invert(100%);
+        }
+    }
+
+    &__order {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 64px;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+
+        & img {
+            width: 32px;
+            height: auto;
+        }
+        
+        & a {
+            transition: transform 0.1s ease-in;
+        }
+        
+        & a:nth-child(1):hover {
+            transform: translateY(-3px);
+        }
+
+        & a:nth-child(2):hover {
+            transform: translateY(3px);
+        }
+    } 
+
+    &--h1 {
+        font-family: "Clash Display", sans-serif;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    &--p {
+        line-height: 2rem;
+        font-weight: 600;
+    }
+
+    &--chapo {
+        line-height: 2rem;
+        font-weight: 600;
+        color: $blackSecond;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    &--a {
+        padding: 1rem 2rem;
+        display: block;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        font-weight: 600;
+        background-color: $red;
+        color: $white;
+
+        &:hover {
+            background-color: $redSecond;
+        }
+    }
+
+    &--blockquote {
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        align-items: flex-start;
+        line-height: 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-left: 4px solid $grayShadow;
+        padding: .5rem 0 .5rem 1rem;
+    }
+
+    &--figure {
+        border: 1px solid $black;
+
+        & img {
+            max-width: 500px;
+        }
+
+        & figcaption {
+            padding: 1rem;
+            text-align: center;
+        }
+    }
+
+    &--h2 {
+        font-family: "Clash Display", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    &--h3 {
+        font-family: "Clash Display", sans-serif;
+        font-size: 1.5rem;
+        color: $gray;
+        font-weight: 600;
+    }
+
+    &--h4 {
+        font-family: "Clash Display", sans-serif;
+        font-size: 1.5rem;
+        color: $gray;
+    }
+
+    &--img {
+        max-width: 500px;
+    }
+
+
+    &__description {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2rem;
+
+        &--author {
+            font-family: "Montserrat", sans-serif;
+            color: $gray;
+        }
+
+        &--date {
+            font-family: "Montserrat", sans-serif;
+            color: $gray;
+        }
+    }
+
+    &:hover &__alter {
+        visibility: visible;
+    }
+}
+
+.action-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+
+    & img {
+        height: 32px;
+        width: auto;
+    }
+
+    &--right {
+        display: flex;
+        gap: 1rem;
+
+        &__alter {
+            background-color: $black;
+            color: $white;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+
+            &:hover {
+                background-color: $blackSecond;
+            }
+        }
+    }
+}

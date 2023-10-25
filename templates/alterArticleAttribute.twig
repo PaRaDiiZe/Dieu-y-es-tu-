@@ -1,0 +1,36 @@
+{% extends 'base.twig' %}
+
+{% block main %}
+	<main class="container-content">
+		<h1 class="form-h1">Modifier l'article
+			{{article.titre}}</h1>
+		<p class="form-chapo">Ici vous pouvez modifier l'élement
+			{{article.titre}}</p>
+		<form action="index.php?page=article&action=update" method="post" class="form">
+			<input type="text" name="id" id="toAnalyseInput" value="{{article.id}}" style="display : none">
+			<input type="text" name="id_page" id="toAnalyseInput" value="{{article.id_page}}" style="display : none">
+			<input type="text" name="nom" id="toAnalyseInput" placeholder="Titre de l'article" value="{{article.nom}}">
+			<input type="text" name="chapo" id="toAnalyseInput" placeholder="Sous titre de l'article" value="{{article.chapo}}">
+			<input type="text" name="auteur" id="toAnalyseInput" placeholder="Auteur de l'article" value="{{article.auteur}}">
+
+			<div class="form__select">
+				<label for="media-select">Choisissez l'image representative de l'article selon son nom</label>
+				<select name="id_media" id="media-select">
+					<option value="{{article.id_media}}">Laisser l'image n°{{article.id_media}}</option>
+					{% for m in medias %}
+						<option value="{{m.id}}">Fichier
+							{{m.datatype}}
+							:
+							{% if m.alt != null %}
+								{{m.alt}}
+							{% else %}
+								{{m.nom}}
+							{% endif %}
+						</option>
+					{% endfor %}
+				</select>
+			</div>
+			<input type="submit" name="create" value="Modifier">
+		</form>
+	</main>
+{% endblock main %}

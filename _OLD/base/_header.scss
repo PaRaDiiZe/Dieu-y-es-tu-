@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    font-family: 'Clash Display', sans-serif;
+    align-items: center;
+    background-color: $white;
+    flex-wrap: wrap;
+    width: calc(50vw + 180px + 3rem);
+
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        h1 {
+            font-size: 1rem;
+        }
+
+        &__img {
+            height: 35px;
+            width: auto;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: 5rem;
+        font-weight: 600;
+    }
+
+    &__menu {
+        cursor: pointer;
+        transition: .1s ease-out transform;
+        position: fixed;
+        right: 3rem;
+        background-color: $white;
+        padding: .5rem;
+
+        &:hover {
+            transform: translateX(-3px);
+        }
+    }
+}

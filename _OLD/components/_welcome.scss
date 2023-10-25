@@ -1,0 +1,56 @@
+
+.welcome {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 7rem;
+    font-family: 'Montserrat', sans-serif;
+
+    &__img {
+        width: 510px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            @include sectionTitle();
+        }
+
+        &__paragraph {
+            @include sectionSubTitle();
+        }
+
+        &__button-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            gap: 1rem;
+
+            &__item {
+                padding: 1rem 2rem;
+                display: block;
+                width: fit-content;
+                font-weight: 600;
+
+                &--red {
+                    background-color: $red;
+                    color: $white;
+
+                    &:hover {
+                        background-color: $redSecond;
+                    }
+                }
+
+                &--black {
+                    background-color: $black;
+                    color : $white;
+
+                    &:hover {
+                        background-color: $blackSecond;
+                    }
+                }
+            }
+        }
+    }
+}

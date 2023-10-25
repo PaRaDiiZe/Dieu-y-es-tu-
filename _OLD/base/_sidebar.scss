@@ -1,0 +1,96 @@
+.sidebar {
+    z-index: 5;
+    position: fixed;
+    width: 360px;
+    right: -360px;
+    top: 0;
+    height: 100%;
+    font-size: 1.5rem;
+    // box-shadow: -25px 0 25px $grayShadow;
+    background-color: $white;
+    user-select: none;
+    padding: 4rem 2rem 2rem 0;
+    border-left: 1px solid $gray;
+
+    &__title {
+        font-family: 'Clash Display', sans-serif;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__nav {
+        height: 100%;
+        width: 100%;
+        list-style: none;
+        margin-top: 2rem;
+        
+
+        &__item {
+            line-height: 4rem;
+            cursor: pointer;
+
+            &__title {
+                font-size: 1.2rem;
+                font-family: 'Clash Display', sans-serif;
+                padding-right: 3rem;
+                display: block;
+                width: 100%;
+                border-left: 4px solid transparent;
+                position: relative;
+                padding-left : 2rem;
+                font-weight: 600;
+
+                &--active {
+                    color : $red;
+                }
+
+                &:hover {
+                    color : $red;
+                    border-left: 4px solid $red;
+
+                }
+            }
+
+            &__sub-list {
+                position: static;
+                display: none;
+                padding-bottom: .5rem;
+                margin-top: -.5rem;
+
+                &--show {
+                    display: block;
+                }
+
+                &__item {
+                    padding-right: 4rem;
+                    font-weight: normal;
+                    font-family: 'Montserrat', sans-serif;
+                    padding-left : 4rem;
+                    font-size: 1rem;
+                    line-height: 3rem;
+                    font-weight: 500;
+
+                    &:hover {
+                        color : $red;
+                    }
+                }
+            }
+        }
+
+        &__item--show * {
+            display: block;
+        }
+    }
+
+    &--show {
+        right: 0;
+    }
+
+    &__img {
+        width: 50px;
+        margin: 0 auto;
+        bottom: 2rem;
+        right: 2rem;
+        position: absolute;
+    }
+}

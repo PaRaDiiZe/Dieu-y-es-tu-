@@ -1,0 +1,77 @@
+.h1 {
+    margin-top: 4rem;
+    font-family: "Clash Display", sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.chapo {
+    font-family: "Montserrat", sans-serif;
+    line-height: 2rem;
+    font-weight: 600;
+    color: $blackSecond;
+}
+
+.container-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid $black;
+        padding: 1rem;
+        width: 245px;
+        flex: 1;
+
+        &--h1 {
+            font-family: "Clash Display", sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        &--p {
+            font-family: "Montserrat", sans-serif;
+            line-height: 2rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        
+        &--chapo {
+            font-family: "Montserrat", sans-serif;
+            line-height: 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $blackSecond;
+        }
+
+        &--date {
+            font-family: "Montserrat", sans-serif;
+            color: $gray;
+        }
+
+        &__action-container {
+            display: flex;
+            align-items: flex-end;
+
+            & img, & a {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+}
+
+.link-add img{
+    transition: transform 0.25s ease-out;
+    margin-top: 2rem;
+
+    &:hover {
+        transform: rotateZ(90deg);
+    }
+}

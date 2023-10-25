@@ -1,0 +1,12 @@
+@mixin sectionTitle () {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+@mixin sectionSubTitle () {
+    line-height: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    font-weight: 600;
+}

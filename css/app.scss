@@ -1,0 +1,96 @@
+// Utils
+@import './utils/reset.css';
+
+/*
+    Base
+*/
+@import 'base/fonts';
+
+/* ------------------------------ VARIABLES ------------------------------ */
+/* Couleurs principales */
+$orange : #F4A04A;
+$pink : #E89DB6;
+$violet : #F10CF5;
+$blue : #6DCCE8;
+$black : #000;
+$blackSeeTrough : rgba(0, 0, 0, 0.90);
+$white : #fff;
+
+/* Font-weight */
+$fw-black : 900;
+$fw-bold : 700;
+$fw-regular : 400;
+$fw-light : 200;
+$fw-fig : 300;
+
+/*
+    Exports
+*/
+@import 'exports/database';
+
+
+/*
+    Elements
+*/
+@import 'elements/main';
+@import 'elements/medias';
+@import 'elements/podcast';
+
+
+/*  
+    Components
+*/
+@import './components/sectionChurch';
+@import './components/sectionEdito';
+@import './components/sectionChimere';
+@import './components/sectionTheme';
+@import './components/form';
+@import './components/sectionTheme';
+@import './components/sectionBigtitleArt';
+@import './components/sectionTextArt';
+@import './components/sectionDiaporama';
+@import './components/sectionVideo';
+@import './components/sectionTitle';
+@import './components/sectionPortrait';
+@import './components/sectionSuggestions';
+
+//Fonts 
+@import './base/fonts';
+
+
+// Container
+
+@import './base/container';
+
+
+
+/*
+    ScrollBar
+*/
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: $black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $white;
+}
+
+.admin-header {
+    z-index: 1000;
+    background-color: rgb(26, 3, 78);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+
+    & a {
+        color: white;
+    }
+}
